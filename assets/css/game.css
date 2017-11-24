@@ -1,0 +1,134 @@
+#buzzwordBlast {
+  background: #000;
+  padding: 40px 0;
+}
+#buzzwordBlast .gameContainer {
+  margin: 0px auto;
+  position: relative;
+  width: 702px;
+  height: 702px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #0b0b0d url(../images/game-bg.jpg) no-repeat center center;
+  background-size: cover;
+}
+#buzzwordBlast .gameContainer #soundcontrol {
+  position: relative;
+  height: 20px;
+  width: 100%;
+}
+#buzzwordBlast .gameContainer #soundcontrol .controllingitem {
+  position: absolute;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  color: #777;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+#buzzwordBlast .gameContainer #soundcontrol .controllingitem .times {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  color: #20f8c0;
+  text-align: center;
+  line-height: 20px;
+}
+#buzzwordBlast .gameContainer #soundcontrol .controllingitem.inactive {
+  color: #333;
+}
+#buzzwordBlast .gameContainer #soundcontrol .controllingitem.inactive .times {
+  display: block;
+}
+#buzzwordBlast .gameContainer #soundcontrol #musicState {
+  left: 0;
+}
+#buzzwordBlast .gameContainer #soundcontrol #soundState {
+  left: 30px;
+}
+#buzzwordBlast .gameContainer #screens {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 700px;
+  height: 700px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=) no-repeat center center;
+}
+#buzzwordBlast .gameContainer #screens img {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  display: none;
+  opacity: 1;
+}
+#buzzwordBlast .gameContainer #screens img.ready {
+  display: block;
+}
+#buzzwordBlast .gameContainer #screens img#continue {
+  margin-left: -115px;
+}
+#buzzwordBlast .gameContainer #screens img#restart {
+  margin-left: -110px;
+}
+#buzzwordBlast .gameContainer #screens.ready {
+  background: url(../images/startscreen.jpg) no-repeat center center;
+}
+#buzzwordBlast .gameContainer #screens.loss {
+  background: url(../images/endscreen-loss.jpg) no-repeat center center;
+}
+#buzzwordBlast .gameContainer #screens.loss #restart {
+  display: block;
+}
+#buzzwordBlast .gameContainer #screens.win {
+  background: url(../images/endscreen-win.jpg) no-repeat center center;
+}
+#buzzwordBlast .gameContainer #screens.win #continue {
+  display: block;
+}
+#buzzwordBlast .gameContainer #game {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  opacity: .1;
+}
+#buzzwordBlast .gameContainer #game.playing {
+  opacity: 1;
+}
+#buzzwordBlast .gameContainer #gameVars {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#buzzwordBlast .gameContainer #gameVars div {
+  display: inline-block;
+  width: 45%;
+  color: #fff;
+  font-family: 'Oswald';
+  font-style: normal;
+  padding: 10px;
+  opacity: 1;
+}
+#buzzwordBlast .gameContainer #gameVars div span {
+  color: #20f8c0;
+}
+#buzzwordBlast .gameContainer #gameVars div#numlaser {
+  float: left;
+}
+#buzzwordBlast .gameContainer #gameVars div#playerscore {
+  float: right;
+  text-align: right;
+}
+#buzzwordBlast .gameContainer #gameVars div#playerscore::after {
+  clear: both;
+  content: '';
+  height: 0px;
+  display: block;
+}
+#buzzwordBlast .gameContainer #gameVars.endscreen div {
+  opacity: .1;
+}
